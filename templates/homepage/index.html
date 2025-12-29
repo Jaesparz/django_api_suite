@@ -1,0 +1,79 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>Backend</title>
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="dawm2" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/_downloads/86066345483e4df73bb9af2546b9024a/index.html" /><meta name="readthedocs-http-status" content="200" /></head>
+
+<body>
+  <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
+    style='font-family: Inter, "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+      <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-10 py-3">
+        <div class="flex items-center gap-4 text-[#111418]">
+          <div class="size-4">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path>
+            </svg>
+          </div>
+          <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">Backend</h2>
+        </div>
+        <div class="flex flex-1 justify-end gap-8">
+          <div class="flex items-center gap-9"><a class="text-[#111418] text-sm font-medium leading-normal"
+              href="/demo/rest/api/index/">Demo REST API</a></div>
+          <div class="flex items-center gap-9"><a class="text-[#111418] text-sm font-medium leading-normal"
+              href="/landing/api/index/">Landing API</a></div>
+        </div>
+      </header>
+      <div class="flex items-center min-h-[90vh] p-6 bg-gray-50 dark:bg-gray-900">
+
+        <div class="flex-1 h-full max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800">
+          <div class="flex flex-col overflow-y-auto md:flex-row">
+            <div class="h-32 md:h-auto md:w-1/2">
+              <img aria-hidden="true" class="object-cover w-full h-full dark:hidden" 
+                 src="{% static '/img/team.jpg' %}"
+                alt="Office" />
+              <img aria-hidden="true" class="hidden object-cover w-full h-full dark:block" 
+                 src="{% static '/img/team.jpg' %}"
+                alt="Office" />
+            </div>
+            <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
+              <div class="w-full">
+                <h1 class="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200">
+                  Backend
+                </h1>
+                <p class="mb-4 text-gray-600 dark:text-gray-400">
+                  Aquí encontrarás herramientas y servicios esenciales para la gestión de datos, autenticación,
+                  procesamiento de solicitudes, y mucho más.
+
+                  Cada aplicación que forma parte de este entorno ha sido desarrollada con el objetivo de optimizar el
+                  rendimiento, la seguridad y la escalabilidad de nuestros sistemas. Ya sea que estés monitoreando
+                  servicios, accediendo a APIs o gestionando recursos, este portal es tu punto de partida.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
