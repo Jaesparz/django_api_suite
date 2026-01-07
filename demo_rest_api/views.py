@@ -42,10 +42,8 @@ class DemoRestApiItem(APIView):
      def put(self, request, id):
 
       data = request.data
-      item_id = data.get("id")
+   
 
-      if not item_id:
-            return Response({'error': 'El campo id es obligatorio.'}, status=status.HTTP_400_BAD_REQUEST)
 
       #ojo josue no olvidar: [ LO QUE QUIERO GUARDAR ] for [ LO QUE RECORRO ]
 
@@ -60,6 +58,7 @@ class DemoRestApiItem(APIView):
         
 
       data['is_active'] = True
+      data['id'] = id
       data_list[item_index] = data
       
 
@@ -67,10 +66,7 @@ class DemoRestApiItem(APIView):
 
      def patch(self, request, id):
       data = request.data
-      item_id = data.get("id")
-
-      if not item_id:
-            return Response({'error': 'El campo id es obligatorio.'}, status=status.HTTP_400_BAD_REQUEST)
+      
 
       #ojo josue no olvidar: [ LO QUE QUIERO GUARDAR ] for [ LO QUE RECORRO ]
 
@@ -90,14 +86,11 @@ class DemoRestApiItem(APIView):
       return Response({'message': 'Dato actualizado parcialmente.', 'data': original_item}, status=status.HTTP_200_OK)
 
      def delete(self, request, id):
-       item_id = request.data.get('id')
-
-       if not item_id:
-          return Response({'error': 'El campo id es obligatorio.'}, status=status.HTTP_400_BAD_REQUEST)
+       
        
        item_found = None
        for item in data_list:
-            if item['id'] == item_id:
+            if item['id'] == id:
                 item_found = item
                 break
        if not item_found:
